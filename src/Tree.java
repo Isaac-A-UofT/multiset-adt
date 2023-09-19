@@ -102,4 +102,19 @@ public class Tree<T> {
       return size;
     }
   }
+
+  public boolean contains(Object item) {
+    if (this.is_empty()) {
+      return false;
+    }
+    if (this.root == item) {
+      return true;
+    } else {
+      for (Tree<T> i : this.subtrees) {
+        return i.contains(item);
+      }
+      return false;
+    }
+  }
+
 }
