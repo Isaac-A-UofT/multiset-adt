@@ -6,6 +6,9 @@ public class Tree<T> {
   // The item stored at this tree's root, or null if the tree is empty.
   private Object root;
 
+    }
+  private int count(int item) {
+    if (this.isEmpty()) {
   // The list of all subtrees of this tree.
   private List<Tree<T>> subtrees;
 
@@ -39,7 +42,7 @@ public class Tree<T> {
     return (this.root == null);
   }
 
-  public int count(T item) {
+  public int count(int item) {
     if (this.is_empty()) {
       return 0;
     } else {
